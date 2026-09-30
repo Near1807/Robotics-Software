@@ -2,7 +2,9 @@ typedef enum {
     Init = 0,
     Idle = 1,
     Moving = 2,
-    Breaking = 3,
+    Moving_Forward = 3,
+    Moving_Backward = 4,
+    Breaking = 5,
 } Motor_State;
 
 typedef struct {
