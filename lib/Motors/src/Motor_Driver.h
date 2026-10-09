@@ -14,12 +14,13 @@ typedef struct {
 } Motor_Data;
 
 
-extern Motor_Data motor1Data;
-extern Motor_Data motor2Data;
+extern Motor_Data motorData;
 
 
-void Motor_Initialise(Motor_Data *motorData, int initialSpeed, int targetSpeed);
+
+void Motor_Initialise(Motor_Data *motorData);
 void Motor_Task(Motor_Data *motorData);
-void Motor_ChangeSpeed(Motor_Data *motorData);
+int Speed_to_pwm(int speed);
+void Motor_SetSpeed(Motor_Data *motorData, int speed);
 
 
